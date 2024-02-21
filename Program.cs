@@ -1,28 +1,24 @@
-﻿
-        public class InvoiceGenerator
-        {
-            public const double CostPerKilometer = 10.0;
-            public const double CostPerMinute = 1.0;
-            public const double MinimumFare = 5.0;
-
-            public static double TotalFare(double distance, int timeInMinutes)
-            {
-                double fare = distance * CostPerKilometer + timeInMinutes * CostPerMinute;//d*km+t*
-
-                return Math.Max(fare, MinimumFare);
-            }
-        }
-class Program
+﻿namespace abc
 {
-    static void Main(string[] args)
+    public class InvoiceGenerator
     {
-        InvoiceGenerator invoiceGenerator = new InvoiceGenerator();
+        public const double CostPerKilometer = 10.0;
+        public const double CostPerMinute = 1.0;
+        public const double MinimumFare = 5.0;
 
-        // Example journey details: distance = 20 km, time = 30 minutes
-        double distance = 20;
-        int timeInMinutes = 30;
+        public static double TotalFare(double distance, int timeInMinutes)
+        {
+            double fare = distance * CostPerKilometer + timeInMinutes * CostPerMinute;//d*km+t*
 
-        double fare = invoiceGenerator.CalculateFare(distance, timeInMinutes);
-        Console.WriteLine($"Total fare for the journey: Rs. {fare}");
+            return Math.Max(fare, MinimumFare);
+        }
     }
 }
+class Program
+{
+    public static void Main(string[] args)
+    {
+        
+    }
+}
+        
